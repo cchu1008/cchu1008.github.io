@@ -14,7 +14,14 @@
 	text-align: center;
 	font-size: 8pt;
 }
+#content {
+	min-height: 400px;
+}
 body {background-color: rgb(226,237,213);}
-h1 {color: rgb(77,124,161); font-family: courier;}
+h1 {
+	color: rgb(77,124,161);
+	font-family: Georgia, serif;
+	font-size: 30pt;
+}
 p  {color: black; font-family: verdana;}
 
