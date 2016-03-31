@@ -1,10 +1,18 @@
-header {
-	color: rgb(77,124,161);
-	background-color: black;
-}
-nav {
-	background-color: red;
+#header {
 	color: white;
+	background-color: rgb(50,120,50);
+	text-align: center;
+	padding: 10px;
+}
+#nav {
+	background-color: rgb(77,124,161);
+	color: white;
+	padding: 7px;
+	text-decoration: none;
+}
+#footer {
+	text-align: center;
+	font-size: 8pt;
 }
 body {background-color: rgb(226,237,213);}
 h1 {color: rgb(77,124,161); font-family: courier;}
