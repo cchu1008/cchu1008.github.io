@@ -1,3 +1,10 @@
 <style>
-
+header {
+		color: rgb(77,124,161);
+		background-color: black;
+	  }
+	  nav {
+		background-color: red;
+		color: white;
+	  }
 </style>
