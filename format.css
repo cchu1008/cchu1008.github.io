@@ -30,10 +30,11 @@ div.content {
 	min-height: 400px;
 	font-size: 100%;
 	font-family: "Courier New", Courier, monospace;
-	width: 75%;
+	max-width: 67%;
 	margin: auto;
 	border: solid;
 	border-color: black;
+	padding: 55px;
 }
 div.dropdown {
 	position: relative;
@@ -64,6 +65,9 @@ h1 {
 	color: rgb(77,124,161);
 	font-family: Georgia, serif;
 	font-size: 250%;
+}
+h2 {
+	font-size: 190%;
 }
 p {
 	color: black;
