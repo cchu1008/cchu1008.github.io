@@ -29,7 +29,7 @@
 div.content {
 	min-height: 400px;
 	font-size: 100%;
-	font-family: "Courier New", Courier, monospace;
+	font-family: 'contentFont';
 	max-width: 67%;
 	margin: auto;
 	border: solid;
@@ -58,13 +58,25 @@ a:link, a:visited {
 	padding: 5px;
 	text-decoration: none;
 }
+@font-face {
+	font-family: fancyHeader;
+	src: url('KGEyesWideOpen.ttf');
+}
+@font-face {
+	font-family: subHeader;
+	src: url('Fragmentcore.otf');
+}
+@font-face {
+	font-family: contentFont;
+	src: url('KIN668.TTF');
+}
 body {
 	background-color: white;
 }
 h1 {
 	color: rgb(77,124,161);
-	font-family: Georgia, serif;
-	font-size: 250%;
+	font-family: 'fancyHeader';
+	font-size: 500%;
 }
 h2 {
 	font-size: 190%;
