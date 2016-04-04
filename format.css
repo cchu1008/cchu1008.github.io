@@ -15,6 +15,7 @@
 	padding: 7px;
 	text-decoration: none;
 	font-size: 110%;
+	font-family: 'contentFont';
 	width: 75.4%;
 	margin: auto;
 	/*
@@ -25,7 +26,7 @@
 	text-align: center;
 	font-size: 70%;
 	margin: auto;
-	font-family: 'subHeader';
+	font-family: 'contentFont';
 }
 div.content {
 	min-height: 400px;
@@ -72,7 +73,7 @@ a:link, a:visited {
 }
 @font-face {
 	font-family: contentFont;
-	src: url('KIN668.TTF');
+	src: url('NixieOne.ttf');
 }
 body {
 	background-color: rgba(21,172,33,0.4);
