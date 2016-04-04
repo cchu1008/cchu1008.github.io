@@ -23,8 +23,9 @@
 }
 #footer {
 	text-align: center;
-	font-size: 65%;
+	font-size: 70%;
 	margin: auto;
+	font-family: 'subHeader';
 }
 div.content {
 	min-height: 400px;
@@ -32,8 +33,11 @@ div.content {
 	font-family: 'contentFont';
 	max-width: 67%;
 	margin: auto;
+	/*
 	border: solid;
 	border-color: black;
+	*/
+	background-color: rgba(0,0,0,0.75);
 	padding: 55px;
 }
 div.dropdown {
@@ -43,7 +47,7 @@ div.dropdown {
 div.dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: rgba(250,255,0,0.3);
+	background-color: rgba(250,255,0,0.5);
 	width: 94%;
 	min-height: 2px;
 	padding: 2px;
@@ -59,7 +63,7 @@ a:link, a:visited {
 	text-decoration: none;
 }
 @font-face {
-	font-family: fancyHeader;
+	font-family: headerFont;
 	src: url('KGEyesWideOpen.ttf');
 }
 @font-face {
@@ -71,17 +75,18 @@ a:link, a:visited {
 	src: url('KIN668.TTF');
 }
 body {
-	background-color: white;
+	background-color: rgba(21,172,33,0.4);
 }
 h1 {
 	color: rgb(77,124,161);
-	font-family: 'fancyHeader';
+	font-family: 'headerFont';
 	font-size: 500%;
 }
 h2 {
 	font-size: 190%;
+	color: white;
 }
 p {
-	color: black;
+	color: white;
 }
 
