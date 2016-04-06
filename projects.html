@@ -38,11 +38,11 @@
 			var day = now.getDate();
 			var month = now.getMonth();
 			var year = now.getFullYear();
-			var editDate = "April 6<sup>th</sup>, 2016";
+			var editDate = [3,6,16];
 			document.getElementsByClassName("age")[0].innerHTML = year - 1996 - ((month <= 8 || (month == 9 && day < 8)) ? 1 : 0);
 			document.getElementsByClassName("grade")[0].innerHTML = ["1<sup>st</sup>", "2<sup>nd</sup>", "3<sup>rd</sup>", "4<sup>th</sup>", "5<sup>th</sup>", "6<sup>th</sup>"][year - 2014 - ((month < 6) ? 1 : 0)] + " year ";
 			document.getElementsByClassName("date")[0].innerHTML = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][month] + " " + day + " , " + year;
-			document.getElementsByClassName("editedDate")[0].innerHTML = editDate;
+			document.getElementsByClassName("editedDate")[0].innerHTML = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][editDate[0]] + " <sup>" + editDate[1] + "th</sup>, " + (2000 + editDate[2]);
 		</script>
 	</div>
   </body>
