@@ -26,23 +26,26 @@
 			<h2 id="python">PYTHON</h2>
 			<p>Something here about Python</p>
 			<h2 id="vhdl">VHDL</h2>
-			<p>VHDL is a Hardware Description Language that is used to describe systems such as integrated circuits and gate arrays. It is also used as "parallel programming language." Parallel programming languages makes use of the "future concept". This means that one part of the code promises to give information to another part of the code at a future date or time.</p>
+			<p>VHDL is a Hardware Description Language that is used to describe systems such as integrated circuits and gate arrays. It is also used as a "parallel programming language." Parallel programming languages makes use of the "future concept". This means that one part of the code promises to give information to another part of the code at a future date or time rather than giving all the information at the current time.</p>
+			<p>VHDL is most often used to write code that describes a logic circuit. In programs such as VIVADO, the VHDL code is processed and synthesized before it can be simulated.</p>
 			<p>-Sequential Lock Project</p>
 		</div>
 		<div id="footer">
 			<b><p style="color: black;">Written by Courtney Chu</p>
-			<p style="color: black;">Last edited <!--<span class="date"><noscript>sometime this year</noscript></span>--><span class="editedDate"><noscript>Recently</noscript></span></p></b>
+			<p style="color: black;">Last edited <!--<span class="date"><noscript>sometime this year</noscript></span><span class="editedDate"><noscript>Recently</noscript></span>-->April 6<sup>th</sup>, 2016</sup></p></b>
 		</div>
 		<script>
 			var now = new Date();
 			var day = now.getDate();
 			var month = now.getMonth();
 			var year = now.getFullYear();
-			var editDate[] = [3,6,2016];
+			var editMonth = 3;
+			var editDay = 6;
+			var editYear = 2016;
 			document.getElementsByClassName("age")[0].innerHTML = year - 1996 - ((month <= 8 || (month == 9 && day < 8)) ? 1 : 0);
 			document.getElementsByClassName("grade")[0].innerHTML = ["1<sup>st</sup>", "2<sup>nd</sup>", "3<sup>rd</sup>", "4<sup>th</sup>", "5<sup>th</sup>", "6<sup>th</sup>"][year - 2014 - ((month < 6) ? 1 : 0)] + " year ";
 			document.getElementsByClassName("date")[0].innerHTML = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][month] + " " + day + " , " + year;
-			document.getElementsByClassName("editedDate")[0].innerHTML = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][editDate[0]] + " " + editDate[1] + "<sup>th</sup>, " + editDate[2];
+			document.getElementsByClassName("editedDate")[0].innerHTML = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][editMonth] + " " + editDay + "<sup>th</sup>, " + editYear;
 		</script>
 	</div>
   </body>
