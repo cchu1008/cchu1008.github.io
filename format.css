@@ -32,7 +32,7 @@ div.content {
 	min-height: 400px;
 	font-size: 100%;
 	font-family: 'contentFont';
-	max-width: 67%;
+	width: 67%;
 	margin: auto;
 	/*
 	border: solid;
