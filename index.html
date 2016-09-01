@@ -25,7 +25,7 @@
 			<p>This website is very much a work in progress and will hopefully give you a good idea of who I am, where I'd like to go, and what I like to do. If you're interested in looking at any code that I've written, a good chunk is available for browsing on my<a href="https://github.com/cchu1008" target="_blank" style="color: rgb(80,160,170);">GitHub</a>page. What code is not posted to GitHub will be posted in the Projects section.</p>
 			<p>I also strongly recommend you visit<a href="http://harriknox.github.io" style="color: rgb(80,160,170);" target="_blank">Coder By Nature</a>, a site created by a fellow programmer, Harrison Knox, if you would like to read more in-depth about different programming languages like Java, Python, and Ruby, enjoy learning about big numbers, or would like to see some of his projects.</p><br>
 			<p>Thank you for dropping by; I hope you enjoy your stay!</p>
-			
+			<br>
 			<div align="center">
 			<h3>Time left until THE EVENT</h3>
 			<p style="color: white"><span class="countdown"><noscript>UNDETERMINED</noscript></span></p>
@@ -54,30 +54,20 @@
 			var dayInMonth = 30;
 			var rabbitWord = "";
 			
-			if (day == 1)
+			if (day == 1) rabbitWord = "; Rabbit!"
+			
+			if (((month < 7 && month%2 < 1) || (month > 6 && month%2 > 0)) && month != 2) dayInMonth = 31;
+			else if (month == 2)
 			{
-				rabbitWord = "; Rabbit!"
+				if (year%4 == 0) dayInMonth = 29;
+				else dayInMonth = 28;
 			}
 			
-			if ((month < 8 && month%2 > 0) || (month > 7 && month%2 < 1))
-			{
-				dayInMonth = 31;
-			}
+			if ((countDay - day) < 0) countDay = countDay + (dayInMonth - day) - 1;
 			
-			if ((countDay - day) < 0)
-			{
-				countDay = countDay + (dayInMonth - day - 1);
-			}
+			if ((countHour - hour) < 0) countHour = countHour + (24 - hour) - 1;
 			
-			if ((countHour - hour) < 0)
-			{
-				countHour = countHour + (24 - hour);
-			}
-			
-			if ((countMin - minute) < 0) 
-			{
-				countMin = countMin + (59 - minute);
-			}
+			if ((countMin - minute) < 0) countMin = countMin + (59 - minute);
 			/* */
 			document.getElementsByClassName("age")[0].innerHTML = year - 1996 - ((month <= 8 || (month == 9 && day < 8)) ? 1 : 0);
 			/* */
