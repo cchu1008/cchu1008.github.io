@@ -14,7 +14,7 @@
 	<div id="casing">
 		<div id="header">
 			<a href="/"><h1 style="color: white;">Bytes and Bits</h1>
-			<p style="color: white; font-family:'subHeader'; font-size: 140%;">A Recipe for Puzzle Masters</p></a>
+			<p style="color: white; font-family:'subHeader'; font-size: 140%;">A Recipe for Puzzle Masters<span class="rabbit"><noscript></noscript><span></p></a>
 		</div>
 		<div id="nav">
 			<a href="/about.html" style="background-color: rgba(250,255,0,0.3)" alt="About">About</a> | <a href="/resume.html" style="background-color: rgba(250,255,0,0.3)" alt="Resume">Resume</a> | <div class="dropdown"><a href="/projects.html" style="background-color: rgba(250,255,0,0.3)" alt="Projects">Projects</a><div class="dropdown-content"><a href="/projects.html#java" alt="Java">Java</a><!--<hr>--><a href="/projects.html#python" alt="Python">Python</a><a href="/projects.html#vhdl" alt="VHDL">VHDL</a></div></div> | <a href="/recipes.html" style="background-color: rgba(250,255,0,0.3)" alt="Recipes">Recipes</a> | <a href="https://github.com/cchu1008" style="background-color: rgba(250,255,0,0.3)" target="_blank">GitHub</a> | <a href="http://harriknox.github.io" style="background-color: rgba(250,255,0,0.3)" target="_blank">Coder By Nature</a>
@@ -51,7 +51,30 @@
 			var countDay = 20;
 			var countHour = 15;
 			var countMin = 15;
-			var countSec = 0;
+			var dayInMonth = 30;
+			var rabbitWord = "";
+			
+			if (day == 1)
+			{
+				rabbitWord = "; Rabbit!"
+			}
+			
+			if ((month < 8 && month%2 > 0) || (month > 7 && month%2 < 1) dayInMonth = 31;
+			
+			if ((countDay - day) < 0)
+			{
+				countDay = countDay + (dayInMonth - day);
+			}
+			
+			if ((countHour - hour) < 0)
+			{
+				countHour = 24 - hour;
+			}
+			
+			if ((countMin - minute) < 0) 
+			{
+				countMin = 60 - minute;
+			}
 			/* */
 			document.getElementsByClassName("age")[0].innerHTML = year - 1996 - ((month <= 8 || (month == 9 && day < 8)) ? 1 : 0);
 			/* */
@@ -59,7 +82,10 @@
 			document.getElementsByClassName("grade")[0].innerHTML = ["1<sup>st</sup>", "2<sup>nd</sup>", "3<sup>rd</sup>", "4<sup>th</sup>", "5<sup>th</sup>", "6<sup>th</sup>"][year - 2014 - ((month < 6) ? 1 : 0)] + " year ";
 			/* */
 			/* */
-			document.getElementsByClassName("countdown")[0].innerHTML = (countDay - day) + ":" + (countHour - hour) + ":" + (countMin - minute) + ":" + (countSec - second);
+			document.getElementsByClassName("countdown")[0].innerHTML = countDay + ":" + countHour + ":" + countMin + ":" + (60 - second);
+			/* */
+			/* */
+			document.getElementsByClassName("rabbit")[0].innerHTML = rabbitWord;
 			/* */
 			/*
 			document.getElementsByClassName("date")[0].innerHTML = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][month] + " " + day + " , " + year;
