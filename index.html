@@ -37,7 +37,7 @@
 		</div>
 		<div id="footer">
 			<b><p style="color: black;">Written by Courtney Chu</p>
-			<p style="color: black;">Last edited <!--<span class="date"><noscript>sometime this year</noscript></span>-->May 12<sup>th</sup>, 2016</p></b>
+			<p style="color: black;">Last edited <span class="date"><noscript>sometime this year</noscript></span></b>
 		</div>
 		<script>
 			var now = new Date();
@@ -47,11 +47,17 @@
 			var day = now.getDate();
 			var month = now.getMonth();
 			var year = now.getFullYear();
+			
+			var editYear = 2016;
+			var editMonth = "September";
+			var editDay = 1;
+			
 			var countMonth = 9;
 			var countDay = 17;
 			var countHour = 15;
 			var countMin = 15;
 			var dayInMonth = 30;
+			
 			var rabbitWord = "";
 			
 			if (day == 1) rabbitWord = "; Rabbit!"
@@ -83,8 +89,8 @@
 			/* */
 			document.getElementsByClassName("rabbit")[0].innerHTML = rabbitWord;
 			/* */
-			/*
-			document.getElementsByClassName("date")[0].innerHTML = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][month] + " " + day + " , " + year;
+			/* */
+			document.getElementsByClassName("date")[0].innerHTML = editMonth + " " + editDay + "<sup>st</sup>, " + editYear;
 			/* */
 		</script>
 	</div>
