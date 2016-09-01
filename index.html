@@ -48,7 +48,7 @@
 			var month = now.getMonth();
 			var year = now.getFullYear();
 			var countMonth = 9;
-			var countDay = 20;
+			var countDay = 17;
 			var countHour = 15;
 			var countMin = 15;
 			var dayInMonth = 30;
@@ -78,7 +78,7 @@
 			document.getElementsByClassName("grade")[0].innerHTML = ["1<sup>st</sup>", "2<sup>nd</sup>", "3<sup>rd</sup>", "4<sup>th</sup>", "5<sup>th</sup>", "6<sup>th</sup>"][year - 2014 - ((month < 6) ? 1 : 0)] + " year ";
 			/* */
 			/* */
-			document.getElementsByClassName("countdown")[0].innerHTML = countDay + "   :   " + countHour + "   :   " + countMin + "   :   " + (60 - second);
+			document.getElementsByClassName("countdown")[0].innerHTML = countDay + " : " + countHour + " : " + countMin + " : " + (60 - second);
 			/* */
 			/* */
 			document.getElementsByClassName("rabbit")[0].innerHTML = rabbitWord;
