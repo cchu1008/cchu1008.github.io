@@ -59,21 +59,24 @@
 				rabbitWord = "; Rabbit!"
 			}
 			
-			if ((month < 8 && month%2 > 0) || (month > 7 && month%2 < 1) dayInMonth = 31;
+			if ((month < 8 && month%2 > 0) || (month > 7 && month%2 < 1))
+			{
+				dayInMonth = 31;
+			}
 			
 			if ((countDay - day) < 0)
 			{
-				countDay = countDay + (dayInMonth - day);
+				countDay = countDay + (dayInMonth - day - 1);
 			}
 			
 			if ((countHour - hour) < 0)
 			{
-				countHour = 24 - hour;
+				countHour = countHour + (24 - hour);
 			}
 			
 			if ((countMin - minute) < 0) 
 			{
-				countMin = 60 - minute;
+				countMin = countMin + (59 - minute);
 			}
 			/* */
 			document.getElementsByClassName("age")[0].innerHTML = year - 1996 - ((month <= 8 || (month == 9 && day < 8)) ? 1 : 0);
@@ -82,7 +85,7 @@
 			document.getElementsByClassName("grade")[0].innerHTML = ["1<sup>st</sup>", "2<sup>nd</sup>", "3<sup>rd</sup>", "4<sup>th</sup>", "5<sup>th</sup>", "6<sup>th</sup>"][year - 2014 - ((month < 6) ? 1 : 0)] + " year ";
 			/* */
 			/* */
-			document.getElementsByClassName("countdown")[0].innerHTML = countDay + ":" + countHour + ":" + countMin + ":" + (60 - second);
+			document.getElementsByClassName("countdown")[0].innerHTML = countDay + "   :   " + countHour + "   :   " + countMin + "   :   " + (60 - second);
 			/* */
 			/* */
 			document.getElementsByClassName("rabbit")[0].innerHTML = rabbitWord;
