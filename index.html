@@ -63,13 +63,13 @@
 				else dayInMonth = 28;
 			}
 			
-			if ((countDay - day) < 0) countDay = countDay + (dayInMonth - day) - 1;
+			if ((countDay - day) < 0) countDay = countDay + (dayInMonth - day);
 			else countDay = countDay - day;
 			
-			if ((countHour - hour) < 0) countHour = countHour + (24 - hour) - 1;
+			if ((countHour - hour) < 0) countHour = countHour + (23 - hour);
 			else countHour = countHour - hour;
 			
-			if ((countMin - minute) < 0) countMin = countMin + (59 - minute);
+			if ((countMin - minute) < 0) countMin = countMin + 59 - minute;
 			else countMin = countMin - minute - 1;
 			/* */
 			document.getElementsByClassName("age")[0].innerHTML = year - 1996 - ((month <= 8 || (month == 9 && day < 8)) ? 1 : 0);
