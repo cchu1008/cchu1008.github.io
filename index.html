@@ -27,6 +27,7 @@
 			<p>Thank you for dropping by; I hope you enjoy your stay!</p>
 			<br>
 			<div align="center">
+         <!--
 			<h3>Time left until THE EVENT</h3>
 			<p style="color: white"><span class="countdown"><noscript>UNDETERMINED</noscript></span></p>
 			<p style="color: white">Day  Hour  Min  Sec</p>
@@ -70,7 +71,7 @@
 			}
 			
 			if ((countDay - day) < 0) countDay = countDay + (dayInMonth - day);
-			else countDay = countDay - day;
+			else countDay = countDay - day - 1;
 			
 			if ((countHour - hour) < 0) countHour = countHour + (23 - hour);
 			else countHour = countHour - hour;
@@ -84,7 +85,7 @@
 			document.getElementsByClassName("grade")[0].innerHTML = ["1<sup>st</sup>", "2<sup>nd</sup>", "3<sup>rd</sup>", "4<sup>th</sup>", "5<sup>th</sup>", "6<sup>th</sup>"][year - 2014 - ((month < 6) ? 1 : 0)] + " year ";
 			/* */
 			/* */
-			document.getElementsByClassName("countdown")[0].innerHTML = countDay + " : " + countHour + " : " + countMin + " : " + (60 - second);
+			document.getElementsByClassName("countdown")[0].innerHTML = countDay + " : " + countHour + " : " + countMin + " : " + (59 - second);
 			/* */
 			/* */
 			document.getElementsByClassName("rabbit")[0].innerHTML = rabbitWord;
